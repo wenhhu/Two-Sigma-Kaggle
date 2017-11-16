@@ -10,7 +10,7 @@ People is supposed to submit his model in terms of python script to kaggle kerne
 
 ## Model Description
 
-In this repo, "Main-script.py" file is the code I submitted. The model I implemented is a two-layer stacking model combining models including robust regression, stepwise linear regression and ExtraTree.
+In this repo, "Main-script.py" file is the code I submitted. The model I implemented is a two-layer stacking model combining models including robust regression, stepwise linear regression and ExtraTree. Because there are some cross layers in my model structure, I want to describe the model as four layers.
 
 ### Layer 0
 In the initial layer, we used a robust regression to fit y against golden features that are selected according to mutual information and RF. These models will be included in the layer 1 directly. In addition, we used linear model to stepwisely group features up into covar_sets. The feature grouping is based on the improvement of mse before and after grouping. The grouped features are used to fit y.
