@@ -19,7 +19,7 @@ In the initial layer, we used a robust regression to fit y against golden featur
 These layer consists of two parts. The first part is the univariate robust regression model. The second part is the extratree's child model fitted from the output of stepwise linear model.
 
 ### Layer 2
-The top models of layers based on their residual statistics are choosen to be final candidates for forecasting.
+The top models of layer 1 based on their residual statistics are choosen to be final candidates for forecasting.
 
 ### Layer 3
 We used an extratree classifier to determine which model in layer 2 to use. The feature we use is the base features and output of stepwise linear model.
